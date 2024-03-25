@@ -82,7 +82,7 @@ studentRouter.post("/", async (req, res) => {
 
 studentRouter.get("/:id", async (req, res) => {
   try {
-    const studentId = req.params.id;
+    const studentId = Number(req.params.id);
 
     const foundStudent = await getStudentById(studentId);
 
